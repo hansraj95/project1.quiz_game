@@ -1,3 +1,26 @@
+
+let time=document.getElementById("time")
+let secound=0;
+let timeleft=180;
+function convert(time)
+{
+let min=Math.floor(time/60);
+let sec=time%60;
+sec=sec<10? '0'+sec:sec;
+return  min + ':'+ sec
+}
+setInterval(() => {
+ secound=secound+1;
+ console.log(timeleft-secound)
+time.innerHTML=`Time Left ${convert(timeleft-secound)}`
+if((timeleft-secound)==0)
+{
+    location.href="end_page.html"
+}
+    
+},1000);
+
+
 let count=0;
 let api=sessionStorage.getItem("apis")
 console.log(api)
@@ -28,6 +51,7 @@ fetch(api)
     }
     let point=0;
     let nextbutton=document.getElementsByClassName('next')
+
     function onNextButton()
     {  count=count+1;
         if(count>=10)
@@ -35,6 +59,7 @@ fetch(api)
             location.href="end_page.html"
    
         } 
+        
      
      show(count)
      
