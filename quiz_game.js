@@ -1,8 +1,11 @@
 let count=0;
-
+let api=sessionStorage.getItem("apis")
+console.log(api)
 show(count);
 function show(count)
-{fetch('https://opentdb.com/api.php?amount=10&category=21&difficulty=medium&type=multiple')
+{let api=sessionStorage.getItem("apis")
+
+fetch(api)
 .then(res=>res.json())
 .then(data => 
     {  listitems=data.results;
@@ -49,8 +52,11 @@ function show(count)
     function create_page(total,listitems)
 
     {  
-         
+         console.log(listitems)
         let questions=document.getElementById("questions");
+        let difficulty=document.getElementById("question-number");
+        difficulty.innerHTML=`<div class="difficult">difficulty:</div>
+        <div class="easy">${listitems.difficulty}</div>`
         questions.innerHTML=`<h2 id="questions">(${count+1})${listitems.question}</h2>`
         let page=document.getElementById("page");
         page.innerHTML=`
