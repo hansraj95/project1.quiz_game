@@ -29,22 +29,24 @@ fetch(api)
     let point=0;
     let nextbutton=document.getElementsByClassName('next')
     function onNextButton()
-    {  
-        
-     count=count+1;
-     console.log(correctanswer)
+    {  count=count+1;
+        if(count>=10)
+        {
+            location.href="end_page.html"
+   
+        } 
+     
+     show(count)
+     
      let answer=document.querySelector("li.option.active").innerHTML
+    
      if(answer==correctanswer)
      {
          point=point+10;
          sessionStorage.setItem("points",point)
      }
-     if(count==10)
-     {
-         location.href="end_page.html"
-
-     }
-     show(count)
+     
+     
      
     }
     
@@ -55,9 +57,9 @@ fetch(api)
          console.log(listitems)
         let questions=document.getElementById("questions");
         let difficulty=document.getElementById("question-number");
-        difficulty.innerHTML=`<div class="difficult">difficulty:</div>
-        <div class="easy">${listitems.difficulty}</div>`
-        questions.innerHTML=`<h2 id="questions">(${count+1})${listitems.question}</h2>`
+        difficulty.innerHTML=`<div class="difficult"><h3>Difficulty:</h></div>
+        <span class="easy"><h3>${ listitems.difficulty}<h3></span>`
+        questions.innerHTML=`<h2 id="questions">${count+1}.${listitems.question}</h2>`
         let page=document.getElementById("page");
         page.innerHTML=`
         <ul class="options">
