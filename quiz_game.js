@@ -1,4 +1,6 @@
-
+let list1=[];
+let list2=[];
+let list3=[];
 let time=document.getElementById("time")
 let secound=0;
 let timeleft=180;
@@ -11,7 +13,7 @@ return  min + ':'+ sec
 }
 setInterval(() => {
  secound=secound+1;
- console.log(timeleft-secound)
+ 
 time.innerHTML=`Time Left ${convert(timeleft-secound)}`
 if((timeleft-secound)==0)
 {
@@ -53,7 +55,8 @@ fetch(api)
     let nextbutton=document.getElementsByClassName('next')
 
     function onNextButton()
-    {  count=count+1;
+    {   list2.push("no response")
+        count=count+1;
         if(count>=10)
         {
             location.href="end_page.html"
@@ -64,6 +67,9 @@ fetch(api)
      show(count)
      
      let answer=document.querySelector("li.option.active").innerHTML
+     list2.push(answer)
+     sessionStorage.setItem("list5",JSON.stringify(list2))
+    
     
      if(answer==correctanswer)
      {
@@ -95,6 +101,10 @@ fetch(api)
         </ul>
         </div>`
         correctanswer=listitems.correct_answer
+        list1.push(correctanswer)
+        sessionStorage.setItem("list4",JSON.stringify(list1))
+        list3.push(listitems.question)
+        sessionStorage.setItem("list6",JSON.stringify(list3))
         toggleactive();  
         
     }

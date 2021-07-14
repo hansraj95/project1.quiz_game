@@ -139,4 +139,23 @@
   .high-score:hover {
     transform: scale(1.025);
   }
+  #info{
+    padding: 20px;
+    margin-bottom: 10px;
+    
+  }
+  .info1
+  { font-weight: bold;
+    color: #04204e;
+    font-family: 'Times New Roman', Times, serif;
+     text-align: center;
+  }
+
+  .info2
+  { font-weight: bold;
+    color: #04204e;
+    font-family: 'Times New Roman', Times, serif;
+     
+  }
+ 
   
