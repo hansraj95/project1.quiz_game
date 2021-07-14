@@ -9,21 +9,27 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg,#e7718e,#5e287e);
+    background-image: url(img2.jpg);
+    background-size: cover;
 }
 .container
 {
     max-width: 700px;
     width: 100%;
-    background: #fff;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 25px 30px;
     border-radius: 10px;
+    border: 2px solid white;
+    color: #fff;
+    
 }
 .container .title
 {
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    color: red;
 }
 .container .title::before{
     content: '';
@@ -32,7 +38,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background: #9b59b6;
+    background: #fff;
 }
 .container form .user-details
 {
@@ -45,7 +51,7 @@ form .user-details .input-box
    width: 45%;
 }
 .user-details .input-box input
-{
+{   background-color:  rgba(0, 0, 0, 0.1);
     height: 45px;
     width: 100%;
     outline: none;
@@ -53,11 +59,12 @@ form .user-details .input-box
     padding-left:20px;
     font-size: 15px;
     transition: all 0.3s ease;
+    color: white;
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid
 {
-border-color: #9b59b6;
+border-color: #fff;
 }
 form .gender-details .gender-title
 {
@@ -114,7 +121,7 @@ form input[type="radio"]
     font-weight: 500;
     border-radius: 10px;
     letter-spacing: 1px;
-    background: red;
+    background: blue;
 }
 .button:hover{
     cursor: pointer;
