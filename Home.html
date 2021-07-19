@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="login2.css">
+    <link rel="stylesheet" href ="logincss.css">
+   
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="body">
+    <div id="header">
+    <header> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navbar">
+            <a class="navbar-brand" href="#">Quiz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+              
+
+              </ul>
+            </div>
+          </nav>
+    </header>
+    </div>
+<main >
+    <div class="container-fluid " >
+      <div class="mb-2">
+       <div class="row justify-content-md-center" >
+         <div class="col-md-9  col-sm-8" id="one1" >
+           <img class="image w-100% " src="one.png " id="photo">
+         </div>
+           <div class="col-sm-6 col-md-3 mb-2" id="one">
+            
+                <!--form start -->
+             
+                <form class =" shadow-lg mt-3 mb-2 align-self-md-center" action="registration.html" onsubmit=" return validateform()" id="form-details"   method="#">
+                      <h3 class="text-center">SignUp</h3>
+                      <input type="email" class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                      <input type="password" class="form-control mb-1" id="exampleInputPassword1" placeholder="Password" required>
+                     
+                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Re Enter Password" required>
+                       <div class="text-white" id="fromJs"></div>            
+                       <div class="text-white" id="length"></div>   
+                       <div class="form-check">
+                      <input type="checkbox" class="form-check-input  mb-4" id="exampleCheck1" >
+                      <label class="form-check-label" for="exampleCheck1" id="checkBox"><a href ="#">Check conditions out</a></label>
+                      <div class="text-white" id="forCheck"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" href="registration.html">Login.</button>
+                </div>
+                  </form>
+                  <!--form end -->
+              
+           </div>
+          </div>
+       </div>
+     
+</main>
+
+<footer class="page-footer font-small blue bo mt-1 pt-5" id="footer">    
+    <div class="container-fluid "> 
+      <div class="row">
+        <div class=" col col-sm-4 col-md-4 text-center ">
+          <h2 class=" border-2 text-uppercase  font-weight-bold"id="quiz-footer" >Quiz</h2>
+          <p class="mr-4">Here you can use test your skills and get Score .</p>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">  
+        <!-- Grid column -->
+        <div class="col-md-4 col-sm-4 mb-md-0 mb-4  text-center">
+  
+          <!-- Links -->
+          <h5 class="text font-italic">Contact</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+                
+              <p class="font-italic text-primary" id="contact"><span class="text-white font-italic"> Phone</span> +91 8585858585</p>
+            </li>
+            <li>
+                
+                <a href = "Quiz-contact-us@Quiz.com.in" class="font-italic">Quiz-contact-us@Quiz.co.in</a>
+            
+            </li>         
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col col-sm-3 col-md-3  mr-2 position-relative" id="social-links" >
+  
+          <!-- Links -->
+          <h5 class="text">Social Links</h5>
+                <div>
+                    <a href="#" class="fa fa-facebook " id="facebook" ></a>
+                    <a href="#" class="fa fa-twitter mr-2"id="twitter"></a>
+                    <a href="#" class ="fa fa-instagram mr-2"id="instagram"></a>
+                    
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <hr class="bg-dark">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"> Quiz.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  </div>
+</body>
+</html>

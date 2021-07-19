@@ -1,0 +1,130 @@
+#navbar{
+    font-style: italic ;
+    background-color:darkgray !important;
+    text-shadow: 2;
+    position:sticky;
+    color:blue ;
+}
+#navbar{
+    max-width: 100%;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+main .mb-2 .row .col-md-9 .image{
+    max-width: 100%;
+    width: 69rem;
+    height: auto;
+}
+/*#photo {
+    width: 69rem;
+    height: auto;
+}*/
+#form-details {
+
+    text-align: center;
+    max-width: 100%;
+    border: 20px;
+    width: 200px;
+    padding: 2px;
+    position:relative;
+    left: -6rem;
+    right: 2rem;
+    top: 4rem;
+    height: 320px;
+    margin: bottom 3rem; ;
+    border-radius: 4rem;
+    /*transform: translate(-50%,-50%);*/
+background-color: #191919;
+}
+#form-details{
+    
+    color: white;
+    width: 400px;
+    background-color: #191919;
+}
+#form-details input[type="email"], #form-details input[type="password"]{
+    max-width: 100%;
+    background: none;
+    width: 200px;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    border-radius: 24px;
+    transition: 0.25s;
+
+}
+
+#form-details input[type="email"]:focus, #form-details input[type="password"]:focus{
+max-width: 100%;
+    width: 280px;
+border: color #2ecc71; ;
+}
+#form-details input[type="subbmit"]:hover{
+    background:#2ecc71 ;
+}
+#form-details input[type="submit"]{
+    max-width: 100%;
+    background: none;
+    width: 200px;
+    margin: 20px auto;
+    border: 2px solid #3498db;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+#details{
+    background-color: rgb(170, 170, 252) !important ;
+}
+/* #form-details{
+    background-color: whitesmoke;
+} */
+#footer{
+    background-color: black;
+    color: white;
+}
+#quiz-footer{
+    color: red;
+    padding:3;
+    text-shadow: 4 cornsilk;
+    
+}
+
+#social-links{
+    max-width: 100%;
+    position: relative;
+    left: 4rem;
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+@media(max-width:600px)
+{
+
+    
+    #body{
+        overflow-x: hidden;
+    }
+    #header{
+        width: 100%;
+    }
+    #form-details {
+
+        text-align: center;
+        max-width: 80%;
+        border: 20px;
+        width: 300px;
+        padding: 2px;
+        position:relative;
+        left: 2rem;
+        right: 2rem;
+        top: .3rem;
+        height: 320px;
+        margin: bottom 3rem; ;
+        border-radius: 4rem;
+        /*transform: translate(-50%,-50%);*/
+    background-color: #191919;
+    }
+
+}

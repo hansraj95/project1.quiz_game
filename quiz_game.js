@@ -3,7 +3,9 @@ let list2=[];
 let list3=[];
 let time=document.getElementById("time")
 let secound=0;
-let timeleft=180;
+let timeleft=120;
+let count=0;
+//timer start
 function convert(time)
 {
 let min=Math.floor(time/60);
@@ -21,29 +23,19 @@ if((timeleft-secound)==0)
 }
     
 },1000);
+//timer end
 
-
-let count=0;
-let api=sessionStorage.getItem("apis")
-console.log(api)
-show(count);
-function show(count)
-{let api=sessionStorage.getItem("apis")
-
-fetch(api)
-.then(res=>res.json())
-.then(data => 
-    {  listitems=data.results;
-        show_data(listitems[count]);
-        
-    })}
-    
  
-   function show_data(listitems)
-    {  
+    let listitem=JSON.parse(sessionStorage.getItem("listitem"))
+    console.log(listitem)
+
+    //load question
+    show(count);
+    function show(count)
+    {  let listitems=listitem[count];
        
        let total=listitems.incorrect_answers;
-        
+       
         
         total.splice(Math.floor(Math.random()*3+1),0,listitems.correct_answer)
         create_page(total,listitems)
@@ -51,20 +43,25 @@ fetch(api)
         
        
     }
+    /*load question end */
+
     let point=0;
     let nextbutton=document.getElementsByClassName('next')
 
+    //check answer ,store point and calling load function
     function onNextButton()
-    {   list2.push("no response")
-        count=count+1;
-        if(count>=10)
+    {  
+        if(count>=9)
         {
             location.href="end_page.html"
    
         } 
         
-     
-     show(count)
+     else if(document.querySelector("li.option.active")==null)
+     {
+         alert("Please select answer")
+     }
+    
      
      let answer=document.querySelector("li.option.active").innerHTML
      list2.push(answer)
@@ -73,19 +70,20 @@ fetch(api)
     
      if(answer==correctanswer)
      {
-         point=point+10;
+         point+=10;
+         console.log(point)
          sessionStorage.setItem("points",point)
      }
-     
-     
-     
+     count=count+1;
+     show(count)
     }
     
-    
+/*next button end*/
+//create dynamic html page
     function create_page(total,listitems)
 
     {  
-         console.log(listitems)
+         
         let questions=document.getElementById("questions");
         let difficulty=document.getElementById("question-number");
         difficulty.innerHTML=`<div class="difficult"><h3>Difficulty:</h></div>
@@ -105,11 +103,13 @@ fetch(api)
         sessionStorage.setItem("list4",JSON.stringify(list1))
         list3.push(listitems.question)
         sessionStorage.setItem("list6",JSON.stringify(list3))
-        toggleactive();  
+    
+        
+        activeClass();  
         
     }
-    
-    function toggleactive()
+    //adding active class
+    function activeClass()
     {
         let elements=document.getElementsByClassName("option");
         
@@ -127,3 +127,5 @@ fetch(api)
             }
         }
     }
+
+    
